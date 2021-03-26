@@ -30,7 +30,7 @@ public class Main {
         System.out.println("Unidentified domain ~ " + unidentified_domain);
         System.out.println("Unidentified protocol ~ " + unidentified_protocol);
 
-        if (host_domain.equals(unidentified_domain) && host_protocol.equals(unidentified_protocol)) {
+        if (host_domain.equals(unidentified_domain) || host_protocol.equals(unidentified_protocol)) {
             System.out.println("\nIdentified " + unidentified_url + " as a legitimate site");
         } else{
             System.out.println("\nIdentified " + unidentified_url + " as a phishing site");
