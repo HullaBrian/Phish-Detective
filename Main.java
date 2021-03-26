@@ -3,7 +3,16 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException{
-        ArrayList<String> urls = new ArrayList<>(FileHandler.readFile("E:/Java/PhishDetective/urls.txt"));
+        String[] filePath = new File("Main.java").getAbsolutePath().split("\\\\");
+        ArrayList<String> path2 = new ArrayList<>(Arrays.asList(filePath).subList(0, filePath.length-1));
+        StringBuilder path = new StringBuilder();
+        for(String value : path2.subList(0,path2.size())){
+            path.append(value).append("\\");
+        }
+        path.append("urls.txt");
+        System.out.println("File path detected as: " + path.toString() + "\n");
+
+        ArrayList<String> urls = new ArrayList<>(FileHandler.readFile(path.toString()));
         String host_url = urls.get(0);
         String unidentified_url = urls.get(1);
         System.out.println("Host url ~ " + host_url);
