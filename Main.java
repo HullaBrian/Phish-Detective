@@ -1,7 +1,11 @@
+import java.io.*;
+import java.util.*;
+
 public class Main {
-    public static void main(String[] args) {
-        String host_url = "http://www.utexas.edu/hr/current/services/ohp.html";
-        String unidentified_url = "https://www.utexas.edu.4909323.877343.xyzabc.ru/2342344/email";
+    public static void main(String[] args) throws FileNotFoundException{
+        ArrayList<String> urls = new ArrayList<>(FileHandler.readFile("E:/Java/PhishDetective/urls.txt"));
+        String host_url = urls.get(0);
+        String unidentified_url = urls.get(1);
         System.out.println("Host url ~ " + host_url);
         System.out.println("Url in question ~ " + unidentified_url);
 
@@ -22,9 +26,15 @@ public class Main {
         } else{
             System.out.println("\nIdentified " + unidentified_url + " as a phishing site");
         }
-
-
-
-
+    }
+}
+class FileHandler {
+    static ArrayList<String> readFile(String filePath) throws FileNotFoundException {
+        ArrayList<String> data = new ArrayList<>();
+        Scanner myScanner = new Scanner(new File(filePath));
+        while(myScanner.hasNext()){
+            data.add(myScanner.nextLine());
+        }
+        return data;
     }
 }
