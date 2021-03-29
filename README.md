@@ -2,12 +2,12 @@
 Phish Detective is a command line application for Windows 10 built to detect a phishing site from two url's
 
 Note: If you want to be able to use this as a full CLA then you need to look at the releases and find the .exe installer. Then you must add the folder path to your System PATH variable
-## How does it work?
+## How it works
 A simple algorithm is used in order to determine whether a url is possibly trying to phish or not
   1. Attain the domain name and protocol of the url
   2. If the the domain name and protocol are the same then it is not a phishing site. If not, the checked url is most likely a phishing url.
 
-## How to work it?
+## How to work it
 In the command prompt simply type
 
 ```
