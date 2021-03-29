@@ -1,5 +1,5 @@
 # Phish Detective
-Phish Detective is a command line application built to detect a phishing site from two url's
+Phish Detective is a command line application for Windows 10 built to detect a phishing site from two url's
 ## How does it work?
 A simple algorithm is used in order to determine whether a url is possibly trying to phish or not
   1. Attain the domain name and protocol of the url
