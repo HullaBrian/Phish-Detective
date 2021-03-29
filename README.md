@@ -24,3 +24,6 @@ Unidentified protocol ~ <checked protocol>
 
 WARNING: Identified <host url> as a possible phishing site
 ```
+## What are the commands?
+  1. ```--host <host url>``` Used to input the url of the host or, in other words, the url that you want the other to be compared to.
+  2. ```--check <checked url``` Used to input the url of the checked or, in other words, the url that you want to compare to the host.
