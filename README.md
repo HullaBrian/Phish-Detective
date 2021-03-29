@@ -7,14 +7,14 @@ A simple algorithm is used in order to determine whether a url is possibly tryin
 
 # How to work it?
 In the command prompt simply type
-  "pd --host <host url> --check <url to check>"
+  "pd --host host url --check url to check"
 Then the out put will look like:
-  "Host url ~ <host url>
-  Url in question ~ <checked url>
+  Host url ~ host url
+  Url in question ~ checked url
 
-  Host domain ~ <host domain>
-  Host protocol ~ <host protocol>
-  Unidentified domain ~ <checked domain>
-  Unidentified protocol ~ <checked protocol>
+  Host domain ~ host domain
+  Host protocol ~ host protocol
+  Unidentified domain ~ checked domain
+  Unidentified protocol ~ checked protocol
 
-  WARNING: Identified <host url> as a possible phishing site"
+  WARNING: Identified host url as a possible phishing site
