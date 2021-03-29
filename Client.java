@@ -6,7 +6,7 @@ import picocli.CommandLine.Option;
 import java.io.FileNotFoundException;
 import java.util.concurrent.Callable;
 
-@Command(name = "pd", description = "Performs a simple algorithm on two given urls\n\tCommands include:\n\t\t--host <host url>\n\t\t--check <url to check>", mixinStandardHelpOptions = true, version = "File Client 1.0")
+@Command(name = "pd", description = "Performs a simple algorithm on two given urls", mixinStandardHelpOptions = true, version = "File Client 1.0")
 class Client implements Callable<String> {
 
     @Option(names = "--host", description = "Defines the host url for checking")
@@ -67,7 +67,7 @@ class Main {
         }
         try {
             if(!stop) {
-                if (host_domain.equals(unidentified_domain) || host_protocol.equals(unidentified_protocol)) {
+                if (host_domain.equals(unidentified_domain) && host_protocol.equals(unidentified_protocol)) {
                     System.out.println("\nIdentified " + unidentified_url + " as a legitimate site");
                 } else {
                     System.out.println("\nWARNING: Identified " + unidentified_url + " as a possible phishing site");
