@@ -33,7 +33,7 @@ class Client implements Callable<String> {
 class Main {
     static void start(String host_url, String unidentified_url) throws FileNotFoundException {
 
-        boolean stop = false;  //jpackage --name pd --input E:\Java\PhishDetective\out\artifacts\PhishDetective_jar --main-jar PhishDetective.jar --main-class picocli.Client --win-console
+        boolean stop = false;
 
         System.out.println("Host url ~ " + host_url);
         System.out.println("Url in question ~ " + unidentified_url);
